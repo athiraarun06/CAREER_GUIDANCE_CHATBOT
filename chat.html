@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Career Chatbot</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='chat.css') }}">
+</head>
+<body>
+  <div class="chat-wrapper">
+    <div class="chat-header">Career Chatbot</div>
+
+    <!-- conversation pane (newest message first) -->
+    <div class="chat-box" id="chat-box">
+      {% for who, txt in messages|reverse %}
+        <div class="msg {{ who }}">
+          <div class="bubble">{{ txt|safe }}</div>
+        </div>
+      {% endfor %}
+    </div>
+
+    <!-- quick‑reply buttons stay visible -->
+    {% if quick_replies %}
+      <div class="quick-replies">
+        {% for label in quick_replies %}
+          <form action="{{ url_for('chat') }}" method="POST">
+            <input type="hidden" name="user_input" value="{{ label }}">
+            <button type="submit">{{ label }}</button>
+          </form>
+        {% endfor %}
+      </div>
+    {% endif %}
+
+    <!-- fallback text input -->
+    <form action="{{ url_for('chat') }}" method="POST" class="input-area">
+      <input name="user_input" placeholder="Type here…" autocomplete="off" required>
+      <button type="submit">Send</button>
+    </form>
+
+    {% if show_footer %}
+      <footer class="chat-footer">Thank you for using STRABOT 😊</footer>
+    {% endif %}
+  </div>
+</body>
+</html>

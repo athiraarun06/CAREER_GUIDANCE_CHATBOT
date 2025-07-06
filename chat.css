@@ -1,0 +1,68 @@
+/* ——— layout container ——— */
+body{
+  margin:0;background:#f3f6fb;
+  font-family:'Segoe UI',sans-serif;
+  display:flex;justify-content:center;align-items:center;
+  min-height:100vh;
+}
+.chat-wrapper{
+  width:540px;background:#fff;border-radius:12px;
+  box-shadow:0 6px 18px rgba(0,0,0,.14);
+  display:flex;flex-direction:column;overflow:hidden;
+}
+
+/* ——— header ——— */
+.chat-header{
+  background:#4d378c;color:#fff;text-align:center;
+  padding:14px 0;font-size:1.3rem;font-weight:600;
+}
+
+/* ——— chat pane ——— */
+.chat-box{
+  flex:1;overflow-y:auto;padding:18px;
+  display:flex;flex-direction:column-reverse;   /* newest on top */
+}
+.msg{margin-bottom:.85rem;}
+.bubble{
+  padding:13px 16px;border-radius:16px;line-height:1.45;
+  max-width:80%;white-space:pre-wrap;
+}
+.msg.user .bubble{background:#357aff;color:#fff}
+.msg.bot  .bubble{background:#fafafa;border:1px solid #e0e0e0}
+
+/* ——— quick‑reply buttons ——— */
+.quick-replies{
+  display:flex;flex-direction:column;gap:10px;padding:12px 18px;
+}
+.quick-replies button{
+  width:100%;background:#fff;color:#4d378c;
+  border:2px solid #4d378c;font-size:.95rem;padding:9px;
+  border-radius:8px;cursor:pointer;transition:.2s;
+}
+.quick-replies button:hover{background:#4d378c;color:#fff}
+
+/* ——— text input ——— */
+.input-area{
+  display:flex;border-top:1px solid #dadada
+}
+.input-area input{
+  flex:1;border:none;padding:15px;font-size:1rem;outline:none
+}
+.input-area button{
+  background:#4d378c;color:#fff;border:none;
+  padding:0 24px;font-size:1rem;cursor:pointer
+}
+.input-area button:hover{background:#3a2c73}
+
+/* ——— footer ——— */
+.chat-footer{
+  text-align:center;font-size:.9rem;color:#666;padding:10px 0;
+  border-top:1px solid #eee
+}
+
+/* ——— scrollbar ——— */
+.chat-box::-webkit-scrollbar{width:6px}
+.chat-box::-webkit-scrollbar-thumb{background:#c4c4c4;border-radius:3px}
+
+/* ——— PDF iframe fits bubble ——— */
+.msg.bot iframe{max-width:100%;border:none}
