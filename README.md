@@ -47,3 +47,4 @@ pip install -r requirements.txt
 # Output:
 <img width="1919" height="1014" alt="Image" src="https://github.com/user-attachments/assets/5d97e62a-89ec-4f69-b961-865136c44560" />
 
+<img width="1914" height="1005" alt="Image" src="https://github.com/user-attachments/assets/f35ac33c-6e30-44a0-90df-559b7fee3575" />
