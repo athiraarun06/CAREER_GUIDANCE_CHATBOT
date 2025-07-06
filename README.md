@@ -45,6 +45,5 @@ pip install -r requirements.txt
    python app.py
 
 # Output:
-
-
+<img width="1919" height="1014" alt="Image" src="https://github.com/user-attachments/assets/5d97e62a-89ec-4f69-b961-865136c44560" />
 
