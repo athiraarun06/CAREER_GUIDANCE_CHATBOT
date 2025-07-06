@@ -4,10 +4,6 @@ Internship with Cynaris Solutions
 
 This is a smart, interactive chatbot designed to help 10th grade students choose the most suitable career path and stream based on their personal preferences, skills, and interests. It uses **Python (Flask)** for backend logic, a **Gemma:2B language model (via Ollama)** for summaries, and a clean **HTML/CSS UI** with no JavaScript.
 
-![UI Screenshot](./screenshots/preview.png)
-
----
-
 ##  Features
 
 -  **25-Question Skill Assessment Quiz**
@@ -48,3 +44,6 @@ pip install -r requirements.txt
 <img width="1919" height="1014" alt="Image" src="https://github.com/user-attachments/assets/5d97e62a-89ec-4f69-b961-865136c44560" />
 
 <img width="1914" height="1005" alt="Image" src="https://github.com/user-attachments/assets/f35ac33c-6e30-44a0-90df-559b7fee3575" />
+
+# Author
+ATHIRA ARUN
